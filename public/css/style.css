@@ -38,7 +38,7 @@
 .nav-link {
     text-decoration: none;
     color: #808080;
-    transition: ease-out 0.3s;
+    transition: color ease-out 0.3s;
 }
 
 .nav-link:hover {
