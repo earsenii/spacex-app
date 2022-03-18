@@ -1,10 +1,9 @@
-@import "~normalize.css/normalize.css";
-body {
+.app-body {
     background: #000;
     font-family: 'Space mono', monospace;
     font-size: 1rem;
     font-weight: 400;
-
+    margin: 0;
 }
 
 .wrapper {
@@ -27,7 +26,7 @@ body {
 
 .header__navigation {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .nav-item {
@@ -103,7 +102,7 @@ footer {
 
 .footer-container__link {
     color: #808080;
-    transition: ease-out 0.3s;
+    transition: color ease-out 0.3s;
 }
 
 .footer-container__link:hover {
@@ -113,7 +112,7 @@ footer {
 /* Main All page */
 .timeline-section{
 	padding: 100px 15px;
-  width: 100%;
+    width: 100%;
 }
 
 .timeline-items{
@@ -166,8 +165,4 @@ footer {
 .timeline-item__date{
 	color: #fff;
 	margin:6px 0 15px;
-}
-
-.timeline-item__content{
-	padding: 5px;
 }
