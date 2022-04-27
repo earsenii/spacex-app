@@ -6,8 +6,14 @@ const $itemsSection = document.querySelector('.timeline-items');
 
 const url = 'https://api.spacexdata.com/v4/launches';
 
+/**
+ * Получение всех запусков
+ */
 const getAllLaunches = sendRequest('GET', url);
 
+/**
+ * Отображение информации о всех запусках
+ */
 getAllLaunches.then((data) => {
   data.forEach((item) => {
     const date = new Date(item.date_utc);

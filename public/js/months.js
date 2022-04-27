@@ -1,3 +1,6 @@
+/**
+ * Массив с месяцами
+ */
 export const months = [
   'Jan',
   'Feb',

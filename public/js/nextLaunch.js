@@ -13,6 +13,9 @@ const $seconds = document.querySelector('#seconds');
 let launchDate = new Date().getTime();
 const url = 'https://api.spacexdata.com/v4/launches/next';
 
+/**
+ * Получение ближайшего запуска
+ */
 const getNextLaunch = sendRequest('GET', url);
 
 getNextLaunch.then((launch) => {
@@ -21,6 +24,10 @@ getNextLaunch.then((launch) => {
   $targetTime.textContent = `${launchDate} GMT+3`;
 });
 
+/**
+ * Получение названия ракеты в ближайшем запуске
+ * @returns {object} Результат запроса в JSON
+ */
 const getNextLaunchRocket = async () => {
   try {
     const nextLaunchResponse = await fetch(`https://api.spacexdata.com/v4/launches/next`);
@@ -39,6 +46,10 @@ getNextLaunchRocket().then((rocket) => {
   $rocket.textContent = rocket.name;
 });
 
+/**
+ * Получение названия площадки запуска в ближайшем запуске
+ * @returns {object} Результат запроса в JSON
+ */
 const getNextLaunchLaunchpad = async () => {
   try {
     const nextLaunchResponse = await fetch(`https://api.spacexdata.com/v4/launches/next`);
@@ -59,6 +70,9 @@ getNextLaunchLaunchpad().then((launchpad) => {
   $launchSite.textContent = launchpad.name;
 });
 
+/**
+ * Отсчет до ближайшего запуска
+ */
 function updateCountdown() {
   const currentTime = new Date().getTime();
   const distance = new Date(launchDate).getTime() - currentTime;

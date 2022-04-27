@@ -1,5 +1,7 @@
+/**
+ * Выделение активной страницы в меню
+ */
 const activePage = window.location.pathname;
-
 const navLinks = document.querySelectorAll('.nav-link');
 
 navLinks.forEach((link) => {

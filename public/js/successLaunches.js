@@ -14,8 +14,14 @@ const body = {
   },
 };
 
+/**
+ * Получение успешных запусков
+ */
 const getSuccessLaunches = sendRequest('POST', url, body);
 
+/**
+ * Отображение информации об успешных запусках
+ */
 getSuccessLaunches.then((data) => {
   const { docs } = data;
   docs.forEach((item) => {

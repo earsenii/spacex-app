@@ -14,8 +14,14 @@ const body = {
   },
 };
 
+/**
+ * Получение неудачных запусков
+ */
 const getFailedLaunches = sendRequest('POST', url, body);
 
+/**
+ * Отображение информации о неудачных запусках
+ */
 getFailedLaunches.then((data) => {
   const { docs } = data;
   docs.forEach((item) => {
