@@ -1,23 +1,18 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+import { Route, Routes } from 'react-router-dom';
 
-// export default App;
+import { About, All, Failed, Home, Successful, LaunchFull } from 'pages';
+
+export const App: FC = () => {
+  return (
+    <Routes>
+      <Route path="/launch/:id" element={<LaunchFull />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/all" element={<All />} />
+      <Route path="/successful" element={<Successful />} />
+      <Route path="/failed" element={<Failed />} />
+      <Route path="about" element={<About />} />
+    </Routes>
+  );
+};

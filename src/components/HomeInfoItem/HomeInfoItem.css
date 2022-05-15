@@ -1,0 +1,8 @@
+.info-item__title {
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
+
+.info-item__description{
+    font-size: 0.7rem;
+}
