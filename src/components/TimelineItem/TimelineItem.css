@@ -1,0 +1,44 @@
+.timeline-item{
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
+}
+
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+	text-align: right;
+}
+
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+    text-align: left;
+}
+
+.timeline-item__dot{
+	height: 16px;
+	width: 16px;
+	background-color: #fff;
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top: 10px;
+}
+
+.timeline-item__date{
+	color: #fff;
+	margin: 6px 0 15px;
+}
+
+.timeline-item__content__link {
+    text-decoration: none;
+    color: #808080;
+    transition: color ease-out 0.3s;
+}
+
+.timeline-item__content__link:hover {
+    color: #fff;
+}
