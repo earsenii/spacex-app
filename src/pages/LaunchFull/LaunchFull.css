@@ -1,0 +1,13 @@
+.link {
+    color: #fff;
+    transition: color ease-out 0.3s;
+}
+
+.link:hover {
+    color: #c0c0c0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}

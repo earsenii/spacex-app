@@ -3,20 +3,11 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 import { MainLayout } from 'layouts';
-import { ILaunch, IRocket } from 'types';
+import { ILaunch, IRocket, ILaunchLinks, IPatch } from 'types';
 import { dateFormat } from 'utils';
+import { HomeInfoItem } from 'components';
 
-interface ILaunchLinks {
-  article?: string;
-  webcast?: string;
-  wikipedia?: string;
-  patch?: object;
-}
-
-interface IPatch {
-  small?: string;
-  large?: string;
-}
+import './LaunchFull.css';
 
 export const LaunchFull: FC = () => {
   const [launch, setLaunch] = useState({} as ILaunch);
@@ -27,7 +18,6 @@ export const LaunchFull: FC = () => {
   const params = useParams();
   const { id } = params;
   const { date_unix, flight_number, name, success, upcoming } = launch;
-  const { small } = patch;
   const { article, webcast, wikipedia } = links;
 
   useEffect(() => {
@@ -60,16 +50,38 @@ export const LaunchFull: FC = () => {
 
   return (
     <MainLayout>
-      <div>
-        {patch.small ? <img src={small} alt="patch" /> : <div>No patch yet</div>}
-        <div>Mission: {name}</div>
-        <div>Rocket: {rocket.name}</div>
-        <div>Flight number: {flight_number}</div>
-        <div>Launch Date: {dateFormat(date_unix)}</div>
-        <div>Success: {upcoming ? 'Upcoming' : success ? 'Successful' : 'Failed'}</div>
-        {article ? <div>Article: {article}</div> : <div>Article: -</div>}
-        {webcast ? <div>Youtube: {webcast}</div> : <div>Youtube: -</div>}
-        {wikipedia ? <div>Wikipedia: {wikipedia}</div> : <div>Wikipedia: -</div>}
+      {patch.small ? <img src={patch.small} alt="patch" /> : <div>No patch yet</div>}
+      <div className="container">
+        <HomeInfoItem title="Mission" description={name} />
+        <HomeInfoItem title="Rocket" description={rocket.name} />
+        <HomeInfoItem title="Flight number" description={flight_number} />
+        <HomeInfoItem title="Launch date" description={dateFormat(date_unix)} />
+        <HomeInfoItem
+          title="Success"
+          description={upcoming ? 'Upcoming' : success ? 'Successful' : 'Failed'}
+        />
+
+        {article ? (
+          <a className="link" href={article} target="_blank" rel="noreferrer">
+            <HomeInfoItem title="Article" />
+          </a>
+        ) : (
+          <HomeInfoItem title="Article" description="-" />
+        )}
+        {webcast ? (
+          <a className="link" href={webcast} target="_blank" rel="noreferrer">
+            <HomeInfoItem title="Youtube" />
+          </a>
+        ) : (
+          <HomeInfoItem title="Youtube" description="-" />
+        )}
+        {wikipedia ? (
+          <a className="link" href={wikipedia} target="_blank" rel="noreferrer">
+            <HomeInfoItem title="Wikipedia" />
+          </a>
+        ) : (
+          <HomeInfoItem title="Wikipedia" description="-" />
+        )}
       </div>
     </MainLayout>
   );

@@ -5,3 +5,5 @@ export * from './launch';
 export * from './rocket';
 export * from './launchpad';
 export * from './timer';
+export * from './launchLinks';
+export * from './patch';
