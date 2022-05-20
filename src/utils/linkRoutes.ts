@@ -1,3 +1,6 @@
+/**
+ * @description Наименование путей для пунктов меню
+ */
 export const linkRoutes = [
     {
         id: 1,

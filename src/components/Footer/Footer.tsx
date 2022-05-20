@@ -2,6 +2,10 @@ import React, { FC } from 'react';
 
 import './Footer.css';
 
+/**
+ * @description Компонент для отображения footer
+ * @component
+ */
 export const Footer: FC = () => {
   return (
     <footer className="footer">

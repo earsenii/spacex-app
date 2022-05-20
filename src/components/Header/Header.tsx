@@ -7,9 +7,16 @@ import { ILink } from 'types/ILink';
 import './Header.css';
 
 interface IProps {
+  /**
+   * @description Пункты меню
+   */
   linkRoutes: ILink[];
 }
 
+/**
+ * @description Компонент для отображения header
+ * @component
+ */
 export const Header: FC<IProps> = ({ linkRoutes }) => {
   const { pathname } = useLocation();
 

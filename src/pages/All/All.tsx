@@ -4,6 +4,9 @@ import axios from 'axios';
 import { MainLayout, TimelineLayout } from 'layouts';
 import { TimelineItem } from 'components';
 
+/**
+ * @description Страница с информацией о всех запусках
+ */
 export const All: FC = () => {
   const [launches, setLaunches] = useState([]);
   const [error, setError] = useState<unknown>();

@@ -9,6 +9,9 @@ import { HomeInfoItem } from 'components';
 
 import './LaunchFull.css';
 
+/**
+ * @description Страница с детальной информацией о выбранном запуске
+ */
 export const LaunchFull: FC = () => {
   const [launch, setLaunch] = useState({} as ILaunch);
   const [rocket, setRocket] = useState({} as IRocket);

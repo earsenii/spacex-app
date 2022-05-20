@@ -9,6 +9,10 @@ interface IProps {
   children: ReactNode;
 }
 
+/**
+ * @description Компонент для отображения Header, Footer и блока для контента
+ * @component
+ */
 export const MainLayout: FC<IProps> = ({ children }: IProps) => {
   return (
     <div className="wrapper">

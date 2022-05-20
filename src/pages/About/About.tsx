@@ -4,6 +4,9 @@ import { MainLayout } from 'layouts';
 
 import './About.css';
 
+/**
+ * @description Страница с информацией о проекте
+ */
 export const About: FC = () => {
   return (
     <MainLayout>

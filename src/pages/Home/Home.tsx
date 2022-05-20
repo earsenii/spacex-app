@@ -9,6 +9,9 @@ import { ILaunch, IRocket, ILaunchpad, ITimer } from 'types';
 
 import './Home.css';
 
+/**
+ * @description Главная страница с информацией о следующем запуске
+ */
 export const Home: FC = () => {
   const [launch, setLaunch] = useState({} as ILaunch);
   const [rocket, setRocket] = useState({} as IRocket);
@@ -41,6 +44,10 @@ export const Home: FC = () => {
     getNextLaunch();
   }, []);
 
+  /**
+   * Отображение блока с таймером
+   * @component
+   */
   const renderer = ({ days, hours, minutes, seconds, completed }: ITimer) => {
     if (completed) {
       return <div className="timer-message">Launch is done</div>;

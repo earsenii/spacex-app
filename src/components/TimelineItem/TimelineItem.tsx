@@ -6,6 +6,10 @@ import { IItem } from 'types/IItem';
 
 import './TimelineItem.css';
 
+/**
+ * @description Компонент для отображения информации о запуске на страницах со всеми запусками
+ * @component
+ */
 export const TimelineItem: FC<IItem> = ({ id, name, date_unix, success, upcoming }) => {
   return (
     <div className="timeline-item">

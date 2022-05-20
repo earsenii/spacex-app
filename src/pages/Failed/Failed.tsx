@@ -4,6 +4,9 @@ import axios from 'axios';
 import { MainLayout, TimelineLayout } from 'layouts';
 import { TimelineItem } from 'components';
 
+/**
+ * @description Страница с информацией о неудачных запусках
+ */
 export const Failed: FC = () => {
   const [launches, setLaunches] = useState([]);
 
