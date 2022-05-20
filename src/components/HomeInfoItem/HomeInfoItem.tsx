@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { IInfoItem } from 'types/infoItem';
+import { IInfoItem } from 'types/IInfoItem';
 
 import './HomeInfoItem.css';
 

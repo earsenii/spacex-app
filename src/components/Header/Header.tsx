@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { Link, useLocation } from 'react-router-dom';
 
-import { ILink } from 'types/link';
+import { ILink } from 'types/ILink';
 
 import './Header.css';
 

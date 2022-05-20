@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import { dateFormat, dateFormatMini } from 'utils';
-import { IItem } from 'types/item';
+import { IItem } from 'types/IItem';
 
 import './TimelineItem.css';
 
