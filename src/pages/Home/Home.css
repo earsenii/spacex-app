@@ -1,0 +1,25 @@
+.timer {
+    display: flex;
+    font-size: 7rem;
+    font-weight: 500;
+}
+
+.timer-message {
+    display: flex;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.pattern {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.info {
+    font-size: 0.8rem;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+}

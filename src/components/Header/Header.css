@@ -1,0 +1,44 @@
+.header {
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-bottom: 20px;
+}
+
+.header__title {
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+.header__navigation {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 0.2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #808080;
+    transition: color ease-out 0.3s;
+}
+
+.nav-link:hover {
+    color: #c0c0c0;
+}
+
+.active {
+    background: #212529;
+    color: #c0c0c0;
+}
